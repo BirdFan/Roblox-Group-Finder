@@ -4,8 +4,6 @@ import requests, random
 from dhooks import Webhook
 import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("Aleks Group Finder")
-
-
 def groupfinder():
     id = random.randint(1000000, 1150000)
     r = requests.get(f"https://www.roblox.com/groups/group.aspx?gid={id}") 
@@ -21,11 +19,7 @@ def groupfinder():
             print(f"[-] Group Locked: {id}")
     else:
         print(f"[-] Group Already Owned: {id}")
-
-
 print("""
-
-
 ____ _    ____ _  _ ____    ____ ____ ____ _  _ ___  
 |__| |    |___ |_/  [__     | __ |__/ |  | |  | |__] 
 |  | |___ |___ | \_ ___]    |__] |  \ |__| |__| |    
@@ -37,9 +31,10 @@ ____ _ _  _ ___  ____ ____
 """)
 
 #your webhook
-hook = https://discordapp.com/api/webhooks/985655474156363796/K5WGxwRuteNHax94mQ6PXsN09u-zxWJBSA7SYyvTPRNhHqlcXAsZYOohdAsXktnNimDL
+hook = Webhook(input("[-] Enter your webhook url: "))
+hook = input("[-] Enter your webhook url: "))
 #number of threads
-threads = 1000
+threads = int(input("[-] How many threads: "))
 
 while True:
     if threading.active_count() <= threads:
